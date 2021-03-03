@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var postsRouter = require('./routes/posts');
 
 var app = express();
 
@@ -17,6 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/posts', postsRouter);
 
 const mongoDb = 'mongodb+srv://nnemtcev:Hariton12!@cluster0.8eiwn.mongodb.net/blog_api?retryWrites=true&w=majority';
 
